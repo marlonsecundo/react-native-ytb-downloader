@@ -1,12 +1,9 @@
 import React from 'react';
 import {
-  View,
-  Text,
-  TextInput,
-  SafeAreaView,
-  KeyboardAvoidingView,
-  TouchableOpacity,
+  Text, TextInput, SafeAreaView, TouchableOpacity,
 } from 'react-native';
+
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 
 import { YoutubeIcon } from '~/assets/icons';
 
@@ -19,11 +16,13 @@ export default class Main extends React.Component {
 
   render() {
     return (
-      <KeyboardAvoidingView style={styles.container} behavior="padding" enabled>
-        <SafeAreaView>
+      <SafeAreaView style={styles.container}>
+        <KeyboardAwareScrollView enableOnAndroid extraScrollHeight={styles.keyboardAware.height}>
           <YoutubeIcon style={styles.youtube} />
+
           <Text style={styles.text1}>Youtube Playlist</Text>
           <Text style={styles.text2}>Downloader</Text>
+
           <TextInput
             style={styles.textInput}
             value={this.state.textInput}
@@ -34,11 +33,12 @@ export default class Main extends React.Component {
               this.setState({ textInput: value.text });
             }}
           />
+
           <TouchableOpacity style={styles.button} onPress={() => {}}>
             <Text style={styles.buttonText}>Download</Text>
           </TouchableOpacity>
-        </SafeAreaView>
-      </KeyboardAvoidingView>
+        </KeyboardAwareScrollView>
+      </SafeAreaView>
     );
   }
 }

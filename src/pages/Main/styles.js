@@ -24,8 +24,16 @@ const styles = StyleSheet.create({
     flex: 1,
   },
 
+  keyboardAware: {
+    height: hp('3%'),
+  },
+
   placeHolder: {
     color: colors.placeHolderColor,
+  },
+
+  safeArea: {
+    flex: 1,
   },
 
   text1: {
