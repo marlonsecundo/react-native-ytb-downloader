@@ -4,5 +4,5 @@ import {
 } from 'react-native-responsive-screen';
 
 export default {
-  baseMargin: 20,
+  baseMargin: wp('10%'),
 };

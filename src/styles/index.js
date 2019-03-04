@@ -5,7 +5,8 @@ import {
 
 import colors from './colors';
 import metrics from './metrics';
+import fonts from './fonts';
 
 export {
-  colors, metrics, wp, hp,
+  colors, metrics, fonts, wp, hp,
 };
