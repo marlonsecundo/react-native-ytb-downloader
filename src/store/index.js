@@ -1,11 +1,15 @@
-import { createStore, appyMiddleware } from 'redux';
-
+import { createStore, compose, applyMiddleware } from 'redux';
 import reducers from './ducks';
 
 const middlewares = [];
 
-const createAppropriateStore = __DEV__ ? createStore : createStore;
+const appropriateCompose = !__DEV__
+  ? compose(applyMiddleware(...middlewares))
+  : compose(
+    applyMiddleware(...middlewares),
+    console.tron.createEnhancer(),
+  );
 
-const store = console.tron.createStore(reducers);
+const store = createStore(reducers, appropriateCompose);
 
 export default store;
