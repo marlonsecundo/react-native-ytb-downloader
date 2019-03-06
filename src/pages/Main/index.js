@@ -2,14 +2,15 @@ import React from 'react';
 import {
   Text, TextInput, SafeAreaView, TouchableOpacity,
 } from 'react-native';
-
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
-
 import { YoutubeIcon } from '~/assets/icons';
-
 import styles from './styles';
 
-export default class Main extends React.Component {
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { Creators as DownloadsActions } from '~/store/ducks/downloads';
+
+class Main extends React.Component {
   state = {
     textInput: '',
   };
@@ -42,3 +43,11 @@ export default class Main extends React.Component {
     );
   }
 }
+
+const mapStateToProps = state => ({
+  downloads: state.downloads,
+});
+
+const mapDispatchToProps = dispatch => bindActionCreators(DownloadsActions, dispatch);
+
+export default connect(mapStateToProps, mapDispatchToProps)(Main);

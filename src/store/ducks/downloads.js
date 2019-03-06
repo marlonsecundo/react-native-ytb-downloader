@@ -21,20 +21,17 @@ export default function downloads(state = initialState, action) {
 }
 
 export const Creators = {
-  startDownload: {
-    request: url => ({
-      type: Types.START_DOWNLOAD.REQUEST,
-      payload: url,
-    }),
-
-    failure: msg => ({
-      type: Types.START_DOWNLOAD.FAILURE,
-      payload: msg,
-    }),
-
-    success: msg => ({
-      type: Types.START_DOWNLOAD.SUCCESS,
-      payload: msg,
-    }),
-  },
+  // startDownload
+  startDownloadRequest: url => ({
+    type: Types.START_DOWNLOAD.REQUEST,
+    payload: url,
+  }),
+  startDownloadFailure: msg => ({
+    type: Types.START_DOWNLOAD.FAILURE,
+    payload: msg,
+  }),
+  startDownloadSucess: msg => ({
+    type: Types.START_DOWNLOAD.SUCCESS,
+    payload: msg,
+  }),
 };

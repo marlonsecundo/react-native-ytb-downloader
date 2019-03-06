@@ -570,6 +570,15 @@
     lodash "^4.17.11"
     to-fast-properties "^2.0.0"
 
+"@microlink/youtube-dl@^1.13.1":
+  version "1.13.1"
+  resolved "https://registry.yarnpkg.com/@microlink/youtube-dl/-/youtube-dl-1.13.1.tgz#d9b1941fbb7ab114829c757b827690a753bf9ac1"
+  dependencies:
+    hh-mm-ss "~1.2.0"
+    mkdirp "~0.5.1"
+    request "~2.88.0"
+    streamify "~0.2.9"
+
 "@react-navigation/core@3.1.1":
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/@react-navigation/core/-/core-3.1.1.tgz#badf449ac7d2ae65b0f5aa1bf63a87e7888458d3"
@@ -2373,6 +2382,18 @@ has@^1.0.1, has@^1.0.3:
   dependencies:
     function-bind "^1.1.1"
 
+hashish@~0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/hashish/-/hashish-0.0.4.tgz#6d60bc6ffaf711b6afd60e426d077988014e6554"
+  dependencies:
+    traverse ">=0.2.4"
+
+hh-mm-ss@~1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/hh-mm-ss/-/hh-mm-ss-1.2.0.tgz#6d0f0b8280824a634cb1d1f20e0bc7bc8b689948"
+  dependencies:
+    zero-fill "^2.2.3"
+
 hoist-non-react-statics@^2.3.1, hoist-non-react-statics@^2.5.0:
   version "2.5.5"
   resolved "https://registry.yarnpkg.com/hoist-non-react-statics/-/hoist-non-react-statics-2.5.5.tgz#c5903cf409c0dfd908f388e619d86b9c1174cb47"
@@ -3753,7 +3774,7 @@ mixin-deep@^1.2.0:
     for-in "^1.0.2"
     is-extendable "^1.0.1"
 
-mkdirp@^0.5.0, mkdirp@^0.5.1:
+mkdirp@^0.5.0, mkdirp@^0.5.1, mkdirp@~0.5.1:
   version "0.5.1"
   resolved "https://registry.yarnpkg.com/mkdirp/-/mkdirp-0.5.1.tgz#30057438eac6cf7f8c4767f38648d6697d75c903"
   dependencies:
@@ -4766,7 +4787,7 @@ request-promise-native@^1.0.5:
     stealthy-require "^1.1.1"
     tough-cookie "^2.3.3"
 
-request@^2.87.0:
+request@^2.87.0, request@~2.88.0:
   version "2.88.0"
   resolved "https://registry.yarnpkg.com/request/-/request-2.88.0.tgz#9c2fca4f7d35b592efe57c7f0a55e81052124fef"
   dependencies:
@@ -5191,6 +5212,12 @@ stream-buffers@~2.2.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/stream-buffers/-/stream-buffers-2.2.0.tgz#91d5f5130d1cef96dcfa7f726945188741d09ee4"
 
+streamify@~0.2.9:
+  version "0.2.9"
+  resolved "https://registry.yarnpkg.com/streamify/-/streamify-0.2.9.tgz#8938b14db491e2b6be4f8d99cc4133c9f0384f0b"
+  dependencies:
+    hashish "~0.0.4"
+
 strict-uri-encode@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/strict-uri-encode/-/strict-uri-encode-2.0.0.tgz#b9c7330c7042862f6b142dc274bbcc5866ce3546"
@@ -5400,6 +5427,10 @@ tr46@^1.0.1:
   resolved "https://registry.yarnpkg.com/tr46/-/tr46-1.0.1.tgz#a8b13fd6bfd2489519674ccde55ba3693b706d09"
   dependencies:
     punycode "^2.1.0"
+
+traverse@>=0.2.4:
+  version "0.6.6"
+  resolved "https://registry.yarnpkg.com/traverse/-/traverse-0.6.6.tgz#cbdf560fd7b9af632502fed40f918c157ea97137"
 
 trim-right@^1.0.1:
   version "1.0.1"
@@ -5793,3 +5824,7 @@ yargs@^9.0.0:
     which-module "^2.0.0"
     y18n "^3.2.1"
     yargs-parser "^7.0.0"
+
+zero-fill@^2.2.3:
+  version "2.2.3"
+  resolved "https://registry.yarnpkg.com/zero-fill/-/zero-fill-2.2.3.tgz#a3def06ba5e39ae644850bb4ca2ad4112b4855e9"
